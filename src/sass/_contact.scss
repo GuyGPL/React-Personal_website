@@ -1,0 +1,123 @@
+.contact-section {
+    margin-bottom: 10rem;
+}
+
+.contact-content {
+    padding: 5rem 0;
+    max-width: 70%;
+    margin: 0 auto;
+    animation: moveInBottom .8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    
+
+    &__title {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 300;
+        margin-bottom: 4rem;
+
+        @media only screen and (max-width: $bp-medium-2) {
+            font-size: 3rem;
+         }
+
+         @media only screen and (max-width: $bp-medium-2) {
+            font-size: 2.5rem;
+         }
+    }
+
+    &__body {
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        &__first-section {
+            display: flex;
+            justify-content: center;
+            width: 85rem;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 3rem;
+
+            }
+
+            @media only screen and (max-width: $bp-medium-2) {
+                flex-direction: column;
+                align-items: center;
+             }
+        }
+
+        &__second-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 85rem;
+
+            @media only screen and (max-width: $bp-medium-2) {
+                width: 60rem;
+             }
+
+             @media only screen and (max-width: $bp-small-1) {
+                width: 40rem;
+             }
+        }
+    }
+}
+
+.name-input, .email-input {
+    font-family: $font-secondary;
+    height: 5rem;
+    width: 40rem;
+    font-size: 2rem;
+    border: 2px solid $white-primary;
+    border-radius: 10px;
+    padding: 0 2rem;
+
+}
+
+.message-input {
+    font-family: $font-secondary;
+    border: 2px solid $white-primary;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    line-height: 1.6;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.submit-form-button {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $green-primary;
+    text-decoration: none;
+    padding: 1rem 4rem 1rem;
+    border: 3px solid $green-primary;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: .2s ease;
+    background-color: transparent;
+
+    &:visited {
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: $white-primary;
+        background-color: $green-primary;
+    }
+}
+
+.name-error, .email-error {
+    color: red;
+    display: block;
+    margin-top: 1rem;
+}
+

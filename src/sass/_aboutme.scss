@@ -1,0 +1,51 @@
+.about-me-section {
+    height: 50rem;
+    background-image: linear-gradient(to right bottom, $green-primary, $green-primary, $green-secondary);
+
+}
+
+.about-me {
+    padding: 10rem 20rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+
+    &__title {
+        color: $white-primary;
+        margin-bottom: 3rem;
+    }
+
+    &__content {
+        padding: 0 8rem;
+        color: $white-primary;
+        line-height: 1.5;
+        letter-spacing: 1px;
+
+        @media only screen and (max-width: $bp-medium-1) {
+            padding: 0 5rem;
+            
+        }
+
+        @media only screen and (max-width: $bp-small-3) {
+            padding: 0rem;
+         }
+        
+        
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 7rem 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium-1) {
+        padding: 6rem 5rem;
+    }
+
+    @media only screen and (max-width: $bp-small-3) {
+        padding: 3rem 2rem;
+
+     }
+}

@@ -1,0 +1,33 @@
+.resume-section {
+    margin-bottom: 10rem;
+    padding: 5rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium-2) {
+        padding: 0;
+        margin-bottom: 5rem;
+     }
+}
+
+.resume-header {
+    animation: moveInRight 1s ease-in-out;
+}
+
+.resume-img-box {
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+
+.resume-img {
+    margin: 5rem 0;
+    border: 3px solid $black-primary;
+    animation: moveInLeft 1s ease-in-out;
+    width: 100%;
+    height: auto;
+
+    @media only screen and (max-width: $bp-medium-2) {
+        border: none;
+
+     }
+}

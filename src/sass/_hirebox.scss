@@ -1,0 +1,91 @@
+.hire-me-box { 
+    display: block;
+    padding: 4rem 0rem 3rem;
+    max-width: 75%;
+    margin: 0 auto;
+   
+    border-radius: 10px;
+    box-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .2);
+    border: 0px solid #E6ECF8;
+
+    background-color: $black-secondary  ;
+    z-index: 1;
+    position: relative;
+
+    @media only screen and (max-width: $bp-large) {
+        max-width: 90%;
+    }
+}
+
+.hire-me-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+    &__title {
+        margin-left: 5rem;
+        color: $white-primary;
+
+        @media only screen and (max-width: $bp-medium-1) {
+            margin-left: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-small-2) {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+         }
+    }
+
+    &__content {
+        color: $white-primary;
+        text-align: center;
+        max-width: 50%;
+
+        @media only screen and (max-width: $bp-medium-1) {
+            max-width: 40%;
+            
+        }
+
+        @media only screen and (max-width: $bp-small-2) {
+            max-width: 95%;
+            margin-bottom: 1rem;
+         }
+    }
+
+    &__link {
+        position: relative;
+        text-decoration: none;
+        margin: 0 0 0 5rem ;
+        font-size: 1.5rem;
+        border-style: solid;
+        border-color: $green-primary;
+        border-radius: 100rem;
+        padding: 1rem 3rem .7rem;
+        margin-right: 5rem;
+        font-weight: 600;
+
+        color: $white-primary;
+        overflow: hidden;
+        background-color: transparent;
+        transition: .3s;
+
+        @media only screen and (max-width: $bp-medium-1) {
+            margin: 0;
+            
+        }
+    }
+
+
+    &__link:hover {
+        background-color: $green-primary;
+    }
+
+    @media only screen and (max-width: $bp-small-2) {
+        flex-direction: column;
+        
+        
+     }
+    
+}
+

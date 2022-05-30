@@ -1,0 +1,42 @@
+.footer-section {
+    background-image: linear-gradient(to right bottom, $green-primary, $green-primary, $green-secondary);
+    margin-top: -5rem;
+    padding-top: 8rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    &__logo {
+        margin-bottom: 2rem;
+    }
+
+    &__quote-content {
+        font-family: $font-secondary;
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-bottom: .8rem;
+    }
+
+    &__quote-author {
+        font-family: $font-secondary;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    &__contact {
+        display: flex;
+        margin-bottom: 2rem;
+    }
+
+    &__copyright {
+        font-family: $font-primary;
+        margin-bottom: 3rem;
+    }
+}

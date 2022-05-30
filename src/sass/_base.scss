@@ -1,0 +1,44 @@
+// color
+$black-primary: black;
+$black-secondary: #141c3a;
+$white-primary: #E6ECF8;
+$green-primary: #2ccf6d;
+$green-secondary: #7ed56f;
+//fonts
+$font-primary: "Epilogue" , sans-serif;
+$font-secondary: 'Fredoka', sans-serif;
+//resopnsive breakpoints
+$bp-largest: 87.5em; //1400px
+$bp-large: 68.75em; //1100px
+$bp-medium-1: 50em; //800px
+$bp-medium-2: 43.75em; //700px
+$bp-small-1: 37.5em; //600px
+$bp-small-2: 31.25em; //500px
+$bp-small-3: 27.81em; //445px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 55%;
+    }
+
+    @media only screen and (max-width: $bp-medium-1) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 300;
+    line-height: 1.6;
+}

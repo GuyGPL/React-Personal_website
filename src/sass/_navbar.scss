@@ -1,0 +1,108 @@
+.navibar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 0rem 8rem;
+    background-color: transparent;
+    animation: blink 2s ease-in;
+
+    @media only screen and (max-width: $bp-medium-1) {
+        padding: 0rem 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small-2) {
+        justify-content: space-around; 
+    }
+
+    
+
+    
+
+    &__brand{
+        margin: 2rem 1rem 1rem;
+        &--img {
+            width: 20rem;
+
+            @media only screen and (max-width: $bp-small-2) {
+                width: 15rem;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium-1) {
+            margin: 1rem 0 0;
+        }
+
+        
+    }
+
+    &__item {
+        display: flex;
+        align-content: center;
+        margin: 2rem 1rem 1rem;
+        margin-right: 2rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        margin: 0 1.5rem;
+        align-self: center;
+        font-size: 1.5rem;
+
+        @media only screen and (max-width: $bp-small-2) {
+            margin: 0 1rem;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+    }
+
+    &__link:hover {
+        color: green;
+        text-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .3);
+    }
+
+    &__link:visited {
+        text-decoration: none;
+        color: $black-primary;
+    }
+
+    &__link:active {
+        transform: translateY(.1rem);
+        text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .5);
+    }
+
+    &__link--contact {
+        border: solid $green-primary;
+        border-radius: 100rem;
+        padding: .8rem 3rem .5rem;
+        margin: 1rem;
+        position: relative;
+        overflow: hidden;
+
+        @media only screen and (max-width: $bp-small-2) {
+            padding: .5rem 1.5rem .25rem;
+        }
+    }
+
+    &__link--contact::before {
+        content: "";
+        position: absolute;
+        background-color:  $green-primary;
+        width: 0%;
+        height: 100%;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        transition: 0.3s ease;
+    }
+
+    &__link--contact:hover {
+        color: $white-primary;
+        transition: 0.3s ease;
+
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
