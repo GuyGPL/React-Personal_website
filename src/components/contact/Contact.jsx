@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Popup from './Popup';
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
+  const sendingForm = useRef();
 
   const [form, setFrom] = useState({
     name: "",
@@ -59,13 +62,20 @@ const Contact = () => {
 
 
     console.log("submitted")
-    console.log(form)
+    console.log(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, process.env.REACT_APP_PUBLIC_ID)
+    emailjs.sendForm( 'service_v2jis8e', 'template_2sszg1r', sendingForm.current, 'kEgmS2xq84yNlfiP7')
+    
     setFrom({
       name: "",
       email: "",
       message: ""
     });
     setPopup(true)
+    setErrorMessage((prevErrorMessage) => {
+      return {
+        prevErrorMessage, 'error' : true
+      }
+    })
   }
 
   function handleError(event) {
@@ -142,7 +152,7 @@ const Contact = () => {
         </h1>
 
         <div className='contact-content__body'>
-          <form className='contact-content__form' autoComplete='off'>
+          <form ref={sendingForm} className='contact-content__form' autoComplete='off'>
 
             <div className='contact-content__form__first-section'>
               <div className='contact-content__form__first-section-item'>
