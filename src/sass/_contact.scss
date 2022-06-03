@@ -39,7 +39,7 @@
         &__first-section {
             display: flex;
             justify-content: center;
-            width: 85rem;
+            max-width: 85rem;
 
             &-item {
                 display: flex;

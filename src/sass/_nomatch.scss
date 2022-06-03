@@ -21,16 +21,30 @@
         width: 35rem;
         margin-bottom: 5rem;
         animation: rotate 5s linear infinite;
+
+        @media only screen and (max-width: $bp-small-1) {
+            width: 30rem;
+         }
+
+         @media only screen and (max-width: $bp-small-3) {
+            width: 25rem;
+         }
     }
 
     &__title {
         color: $black-secondary;
         font-family: $font-secondary;
+
+        @media only screen and (max-width: $bp-small-2) {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+         }
     }
 
     &__text {
         font-family: $font-secondary;
         margin-bottom: 5rem;
+        text-align: center;
     }
 
     &__button {
@@ -43,6 +57,10 @@
         border-radius: 50px;
         overflow: hidden;
         transition: .2s ease;
+
+        @media only screen and (max-width: $bp-small-1) {
+            font-size: 1.5rem;
+         }
     }
 
     &__button:visited {
@@ -53,4 +71,9 @@
         color: $white-primary;
         background-color: $green-primary;
     }
+
+    @media only screen and (max-width: $bp-small-1) {
+        padding: 5rem 10rem;
+        margin-top: 5rem;
+     }
 }
