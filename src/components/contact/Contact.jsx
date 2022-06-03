@@ -40,32 +40,25 @@ const Contact = () => {
   function submitForm(event) {
     event.preventDefault();
 
-    if (errorMessage.name !== "" ) {
-      console.log('error')
+    if (errorMessage.name !== "" ) { //handle case that have error in name
       return
     }
 
-    if (errorMessage.email !== "" ) {
-      console.log('error')
+    if (errorMessage.email !== "" ) { //handle case that have error in email
       return
     }
 
-    if (errorMessage.name === "" && errorMessage.error) {
-      console.log('error')
+    if (errorMessage.name === "" && errorMessage.error) { //in case user never type and submit
       return
     }
 
-    if (errorMessage.email === "" && errorMessage.error) {
-      console.log('error')
+    if (errorMessage.email === "" && errorMessage.error) { //in case user never type and submit
       return
     }
 
-
-    console.log("submitted")
-    console.log(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, process.env.REACT_APP_PUBLIC_ID)
-    emailjs.sendForm( 'service_v2jis8e', 'template_2sszg1r', sendingForm.current, 'kEgmS2xq84yNlfiP7')
+    emailjs.sendForm( process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, sendingForm.current, process.env.REACT_APP_PUBLIC_KEY) //send email
     
-    setFrom({
+    setFrom({ //reset value to empty form 
       name: "",
       email: "",
       message: ""
@@ -81,7 +74,7 @@ const Contact = () => {
   function handleError(event) {
     const name = event.target.name
 
-    setErrorMessage(()=> {
+    setErrorMessage(()=> { //reset error to false (can send email) if error in next process turn back to false
       return {
         "name" : "",
         "email": "",
@@ -93,7 +86,7 @@ const Contact = () => {
     if (form.name === "") {
       setErrorMessage((prevErrorMessage) => {
         return {
-          ...prevErrorMessage, "name": 'name is required', "error": true
+          ...prevErrorMessage, "name": 'name is required', "error": true //in case no value in name
         }
       })
     }
@@ -101,7 +94,7 @@ const Contact = () => {
     if (!form.name.match(/^[a-zA-Z\s]+$/) && form.name !== "" ) {
       setErrorMessage((prevErrorMessage) => {
         return {
-          ...prevErrorMessage, "name": 'only letter', "error": true
+          ...prevErrorMessage, "name": 'only letter', "error": true //in case value no english letter
         }
       })
     }
@@ -110,10 +103,10 @@ const Contact = () => {
     if (form.email === "") {
       setErrorMessage((prevErrorMessage) => {
         return {
-          ...prevErrorMessage, "email": 'email is required', "error": true
+          ...prevErrorMessage, "email": 'email is required', "error": true //in case no value in email
         }
       })
-    } else {
+    } else { //test is value is email?
       let lastAtPos = form["email"].lastIndexOf("@");
       let lastDotPos = form["email"].lastIndexOf(".");
 
@@ -128,14 +121,14 @@ const Contact = () => {
       ) {
         setErrorMessage((prevErrorMessage) => {
           return {
-            ...prevErrorMessage, "email": 'please enter valid email address', "error": true
+            ...prevErrorMessage, "email": 'please enter valid email address', "error": true //if value not email return error
           }
         })
       }
     }
 
     setShowError((prevShowError)=> {
-      return {...prevShowError, [name]: true}
+      return {...prevShowError, [name]: true} //once user unfocus show error message
     })
   }
 
@@ -178,7 +171,7 @@ const Contact = () => {
               </label>
               <textarea onChange={handleChange} value={form.message} name="message" className='message-input' cols="30" rows="10" />
             </div>
-
+            <Popup trigger={popup} closePopup={exitPopup}/>
             <button type='submit' onClick={submitForm} className='submit-form-button'>
               Submit
             </button>
@@ -187,7 +180,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <Popup trigger={popup} closePopup={exitPopup}/>
+      
     </section>
   )
 }

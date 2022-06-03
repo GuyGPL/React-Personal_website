@@ -47,6 +47,10 @@
                 align-items: flex-start;
                 margin: 3rem;
 
+                @media only screen and (max-width: $bp-medium-2) {
+                    margin: 1rem;
+                 }
+
             }
 
             @media only screen and (max-width: $bp-medium-2) {

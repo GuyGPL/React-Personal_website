@@ -23,11 +23,12 @@
     margin: 5rem 0;
     border: 3px solid $black-primary;
     animation: moveInLeft 1s ease-in-out;
-    width: 100%;
+    width: 60%;
     height: auto;
 
-    @media only screen and (max-width: $bp-medium-2) {
+    @media only screen and (max-width: $bp-large) {
         border: none;
+        width: 100%;
 
      }
 }
