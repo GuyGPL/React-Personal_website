@@ -12,71 +12,38 @@ import certificateH from "../../images/certificate_images/cer8.jpg";
 import certificateI from "../../images/certificate_images/cer9.jpg";
 
 const Certificate = () => {
+  const certificateImages = [
+    certificateA,
+    certificateB,
+    certificateC,
+    certificateD,
+    certificateE,
+    certificateF,
+    certificateG,
+    certificateH,
+    certificateI,
+    certificateJ,
+    certificateK,
+  ];
+
   return (
     <div className="certificate-page">
       <div className="certificate-heading">
         <h1 className="heading-2">My Certificate</h1>
         <p className="content-2">
-          It's Certificate of achivementment for my efforts and hard work!
+          It's Certificate of achievement for my efforts and hard work!
         </p>
-        <p className="content-2"> Learning & Improvement</p>
+        <p className="content-2">Learning & Improvement</p>
       </div>
       <div className="certificate-collection">
-        <img
-          className="certificate-collection__img"
-          src={certificateB}
-          alt="cer2"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateA}
-          alt="cer1"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateC}
-          alt="cer3"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateD}
-          alt="cer4"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateE}
-          alt="cer5"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateF}
-          alt="cer6"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateG}
-          alt="cer7"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateH}
-          alt="cer8"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateI}
-          alt="cer9"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateJ}
-          alt="cer10"
-        />
-        <img
-          className="certificate-collection__img"
-          src={certificateK}
-          alt="cer11"
-        />
+        {certificateImages.map((src, index) => (
+          <img
+            key={index}
+            className="certificate-collection__img"
+            src={src}
+            alt={`cer${index + 1}`}
+          />
+        ))}
       </div>
     </div>
   );
