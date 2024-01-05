@@ -16,7 +16,7 @@ const MySkill = (props) => {
         </div>
         
         <div className="my-skill__content">
-          <SkillCard icon={<HtmlSvg />} title="HTML & CSS"/>
+          <SkillCard icon={<HtmlSvg />} title="HTML&CSS,SCSS"/>
           <SkillCard icon={<JavaScriptSvg />} title="JavaScript"/>
           <SkillCard icon={<TypeScriptSvg />} title="TypeScript"/>
           <SkillCard icon={<PythonSvg />} title="Python"/>

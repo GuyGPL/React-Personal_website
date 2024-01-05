@@ -20,7 +20,7 @@ const Popup = (props) => {
     };
   });
 
-  return (props.trigger) ? ( //if trigger is true return popup if not return nothing
+  return (props.trigger) ? ( //if trigger is true return popup else not return nothing
     <div ref={popupRef} className='popup'>
         <div className='popup-box'>
             <div className='popup-content'>
