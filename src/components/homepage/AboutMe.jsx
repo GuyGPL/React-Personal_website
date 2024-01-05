@@ -3,16 +3,25 @@ import React from 'react'
 const AboutMe = () => {
 
   return (
-    <section className='about-me-section'>
-      <div className='about-me'>
-        <h1 className='about-me__title heading-2' >Hello! My name is Guy. Nice to meet you.</h1>
+    <section className="about-me-section">
+      <div className="about-me">
+        <h1 className="about-me__title heading-2">
+          Hello! My name is Guy. Nice to meet you.
+        </h1>
         <p className="about-me__content content-2">
-        I'm a fresh graduate student with a bachelor's degree in Microbiology from Chulalongkorn University who is experienced in Microbiology & Molecular Biology fields. 
-        Recently, I have been interested in data analysis and full-stack developer. I'm naturally curious, work hard, and have always developed my technical skills. 
-        Familiar with frontend JavaScript frameworks such as React and Angular with backend node.js connected to SQL/NoSQL database</p>
-        </div>
+          Results-oriented software engineer with a year and a half of
+          experience, seamlessly transitioning from a diverse background in
+          microbiology and molecular biology. I bring demonstrated expertise in
+          various tech stacks, excelling in collaborative environments with a
+          proactive learning approach. My professional journey showcases
+          adaptability and resilience, as I embrace the dynamic challenges of
+          full-stack development. Actively seeking opportunities to contribute
+          value and innovation in this fast-paced and evolving field. Open to
+          meaningful connections and collaborations.
+        </p>
+      </div>
     </section>
-  )
+  );
 }
 
 export default AboutMe
