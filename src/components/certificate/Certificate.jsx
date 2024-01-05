@@ -1,5 +1,7 @@
 import React from "react";
 import certificateA from "../../images/certificate_images/cer1.jpg";
+import certificateJ from "../../images/certificate_images/cer10.jpg";
+import certificateK from "../../images/certificate_images/cer11.jpg";
 import certificateB from "../../images/certificate_images/cer2.jpg";
 import certificateC from "../../images/certificate_images/cer3.jpg";
 import certificateD from "../../images/certificate_images/cer4.jpg";
@@ -8,7 +10,6 @@ import certificateF from "../../images/certificate_images/cer6.jpg";
 import certificateG from "../../images/certificate_images/cer7.jpg";
 import certificateH from "../../images/certificate_images/cer8.jpg";
 import certificateI from "../../images/certificate_images/cer9.jpg";
-import certificateJ from "../../images/certificate_images/cer10.jpg";
 
 const Certificate = () => {
   return (
@@ -70,6 +71,11 @@ const Certificate = () => {
           className="certificate-collection__img"
           src={certificateJ}
           alt="cer10"
+        />
+        <img
+          className="certificate-collection__img"
+          src={certificateK}
+          alt="cer11"
         />
       </div>
     </div>
