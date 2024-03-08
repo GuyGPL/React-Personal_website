@@ -7,6 +7,7 @@ import {
   ExpressSvg,
   FlaskSvg,
   GitSvg,
+  GolangSvg,
   HtmlSvg,
   JavaScriptSvg,
   KubenetesSvg,
@@ -52,6 +53,7 @@ const MySkill = (props) => {
           <SkillCard icon={<NestjsSvg />} title="NestJS" />
           <SkillCard icon={<DockerSvg />} title="Docker" />
           <SkillCard icon={<KubenetesSvg />} title="Kubenetes" />
+          <SkillCard icon={<GolangSvg />} title="Go" />
         </div>
       </div>
     </section>

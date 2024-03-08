@@ -1,6 +1,7 @@
 import React from "react";
 import {
   SiDocker,
+  SiGo,
   SiKubernetes,
   SiNestjs,
   SiPandas,
@@ -487,4 +488,8 @@ export const DockerSvg = () => {
 
 export const KubenetesSvg = () => {
   return <SiKubernetes className="svg-img svg-img-deep-blue" />;
+};
+
+export const GolangSvg = () => {
+  return <SiGo className="svg-img svg-img-deep-blue" />;
 };
