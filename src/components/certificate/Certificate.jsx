@@ -2,6 +2,8 @@ import React from "react";
 import certificateA from "../../images/certificate_images/cer1.jpg";
 import certificateJ from "../../images/certificate_images/cer10.jpg";
 import certificateK from "../../images/certificate_images/cer11.jpg";
+import certificateL from "../../images/certificate_images/cer12.jpg";
+import certificateM from "../../images/certificate_images/cer13.jpg";
 import certificateB from "../../images/certificate_images/cer2.jpg";
 import certificateC from "../../images/certificate_images/cer3.jpg";
 import certificateD from "../../images/certificate_images/cer4.jpg";
@@ -24,6 +26,8 @@ const Certificate = () => {
     certificateI,
     certificateJ,
     certificateK,
+    certificateL,
+    certificateM,
   ];
 
   return (

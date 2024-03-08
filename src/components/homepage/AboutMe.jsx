@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 
 const AboutMe = () => {
-
   return (
     <section className="about-me-section">
       <div className="about-me">
@@ -9,7 +8,7 @@ const AboutMe = () => {
           Hello! My name is Guy. Nice to meet you.
         </h1>
         <p className="about-me__content content-2">
-          Results-oriented software engineer with a year and a half of
+          Results-oriented software engineer with 1 year and 8 months of
           experience, seamlessly transitioning from a diverse background in
           microbiology and molecular biology. I bring demonstrated expertise in
           various tech stacks, excelling in collaborative environments with a
@@ -22,6 +21,6 @@ const AboutMe = () => {
       </div>
     </section>
   );
-}
+};
 
-export default AboutMe
+export default AboutMe;
